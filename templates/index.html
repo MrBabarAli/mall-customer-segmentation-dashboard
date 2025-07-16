@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mall Customer Segmentation Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-4">
+        <h1 class="mb-4 text-center text-primary">Mall Customer Segmentation</h1>
+
+        <!-- Scatter Plot -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header font-weight-bold text-info">K-Means Clustering (Scatter Plot)</div>
+            <div class="card-body">
+                {{ scatter_plot|safe }}
+            </div>
+        </div>
+
+        <!-- Bar Chart -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header font-weight-bold text-info">Average Stats per Cluster (Bar Plot)</div>
+            <div class="card-body">
+                {{ bar_plot|safe }}
+            </div>
+        </div>
+
+        <!-- Summary Table -->
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header font-weight-bold text-info">Cluster Summary Table</div>
+            <div class="card-body table-responsive">
+                {{ tables[0]|safe }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
